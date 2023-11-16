@@ -6,7 +6,7 @@ export default forwardRef( function Modal({children,buttonCaption},ref){
     useImperativeHandle(ref,()=>{return {open(){
         dialog.current.showModal();
     }}});
-    return createPortal(<dialog ref={dialog}>
+    return createPortal(<dialog ref={dialog} className="backdrop:bg-stone-900/90 p-4 rounded-md shadow-md">
         {children}
         <form method="dialog">
             <button>{buttonCaption}</button>
