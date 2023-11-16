@@ -19,7 +19,7 @@ function App() {
         ...projectData,
         id:Math.random()
       };  
-      return {...prevState,projects:[...prevState.projects,newProject]}
+      return {...prevState,selectedProjectId:undefined,projects:[...prevState.projects,newProject]}
     })
   }
   
