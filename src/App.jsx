@@ -13,6 +13,9 @@ function App() {
     setProjectsState((prevState)=>{return {...prevState,selectedProjectId:null}})
   }
   
+  function handleCancelAddProject(){
+    setProjectsState((prevState)=>{return {...prevState,selectedProjectId:undefined}})
+  }
   function handleAddProject(projectData){
     setProjectsState((prevState)=>{
       const newProject={
